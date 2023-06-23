@@ -114,7 +114,7 @@ def saveDraftline(filename, draftline):
 
 def run_scraper():
     all_drafts = []
-    for i in range(2300, 2310, 1):
+    for i in range(2305, 2310, 1):
         sorteo = str(i)
         Tipo = 'Tr'
         print('sorteo: ', sorteo)
