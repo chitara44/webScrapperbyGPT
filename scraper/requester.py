@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import csv
 import re
+import sys
 
 def switch_case_months(argument):
     text_month = re.sub(r'[^A-Za-z]', '', argument)
@@ -112,9 +113,9 @@ def saveDraftline(filename, draftline):
 
 # Example usage:
 
-def run_scraper():
+def run_scraper(initial, final):
     all_drafts = []
-    for i in range(2305, 2310, 1):
+    for i in range(initial, final, 1):
         sorteo = str(i)
         Tipo = 'Tr'
         print('sorteo: ', sorteo)
@@ -147,4 +148,7 @@ def run_scraper():
         print(str(draftsCount))
 
 
-run_scraper()
+initialDraft = int(sys.argv[1])
+finalDraft = int(sys.argv[2])
+
+run_scraper(initialDraft, finalDraft)
