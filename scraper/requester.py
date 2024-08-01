@@ -84,7 +84,7 @@ def is_a_winner(soup_text):
 
     result = resultado +  resultado2
     finalResult = ""
-    if result == "5+1$0":
+    if result == "5+$0":
         finalResult = "NO,SI"
     else:
         finalResult = "SI,SI"
@@ -147,7 +147,7 @@ def run_scraper(initial, final):
         draftsCount = len(all_drafts)
         print(str(draftsCount))
 
-
+print(sys.argv)
 initialDraft = int(sys.argv[1])
 finalDraft = int(sys.argv[2])
 
